@@ -9,10 +9,10 @@ router.get('/api', (req, res) => {
   res.json({ Started: true })
 })
 
-router.get('/states', UserController.getState)
+router.get('/states', UserController.getStates)
 
-router.post('/user/signin', UserController.signin)
-router.post('/user/signup', UserController.signup)
+router.post('/user/signin', AuthController.signin)
+router.post('/user/signup', AuthController.signup)
 
 router.get('/user/me', UserController.info)
 router.put('/user/me', UserController.editAction)
