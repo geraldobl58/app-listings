@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-mongoose.Promise = global.Prommise
+mongoose.Promise = global.Promise
 
 const modelSchema = new mongoose.Schema({
   name: String
