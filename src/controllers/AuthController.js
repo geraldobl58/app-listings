@@ -20,9 +20,7 @@ module.exports = {
     const user = await User.findOne({ email: data.email })
 
     if (!user) {
-      res.json({
-        error: { email: { msg: 'O e-mail/senha incorretos!' } }
-      })
+      res.json({ error: 'O e-mail/senha incorretos!' })
 
       return
     }
@@ -30,9 +28,7 @@ module.exports = {
     const match = await bcrypt.compare(data.password, user.passwordHash)
 
     if (!match) {
-      res.json({
-        error: { email: { msg: 'O e-mail/senha incorretos!' } }
-      })
+      res.json({ error: 'O e-mail/senha incorretos!' })
 
       return
     }
