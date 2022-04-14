@@ -69,16 +69,12 @@ module.exports = {
       const stateItem = await State.findById(data.state)
 
       if (!stateItem) {
-        res.json({
-          error: { email: { msg: 'O estado não existe' } }
-        })
+        res.json({ error: 'O estado não existe' })
 
         return
       }
     } else {
-      res.json({
-        error: { email: { msg: 'O estado é inválido!' } }
-      })
+      res.json({ error: 'O estado é inválido!' })
 
       return
     }
