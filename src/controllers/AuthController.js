@@ -21,7 +21,7 @@ module.exports = {
 
     if (!user) {
       res.json({
-        erorr: { email: { msg: 'O e-mail/senha incorretos!' } }
+        error: { email: { msg: 'O e-mail/senha incorretos!' } }
       })
 
       return
@@ -31,7 +31,7 @@ module.exports = {
 
     if (!match) {
       res.json({
-        erorr: { email: { msg: 'O e-mail/senha incorretos!' } }
+        error: { email: { msg: 'O e-mail/senha incorretos!' } }
       })
 
       return
@@ -62,7 +62,7 @@ module.exports = {
 
     if (user) {
       res.json({
-        erorr: { email: { msg: 'O e-mail já existe' } }
+        error: { email: { msg: 'O e-mail já existe' } }
       })
 
       return
@@ -74,14 +74,14 @@ module.exports = {
 
       if (!stateItem) {
         res.json({
-          erorr: { email: { msg: 'O estado não existe' } }
+          error: { email: { msg: 'O estado não existe' } }
         })
 
         return
       }
     } else {
       res.json({
-        erorr: { email: { msg: 'O estado é inválido!' } }
+        error: { email: { msg: 'O estado é inválido!' } }
       })
 
       return
